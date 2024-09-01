@@ -24,7 +24,7 @@ urlpatterns = [
     path('logout/',views.logout_view,name='logout_view'),
 
     ########################
-    path('table/<int:table_id>/', views.table_orders, name='table_orders'),
-    path('', views.table_list, name='table_list'),
+    # path('table/<int:table_id>/', views.table_orders, name='table_orders'),
+    # path('', views.table_list, name='table_list'),
 
 ]
