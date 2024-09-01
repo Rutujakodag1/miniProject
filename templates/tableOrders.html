@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders for Table {{ table.table_number }}</title>
+</head>
+<body>
+    <h1>Orders for Table {{ table.table_number }}</h1>
+    <p>Status: {{ table.status }}</p>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order.item }} - Quantity: {{ order.quantity }} - Added at: {{ order.added_at }}</li>
+        {% empty %}
+            <li>No orders yet.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'table_list' %}">Back to Table List</a>
+</body>
+</html>
